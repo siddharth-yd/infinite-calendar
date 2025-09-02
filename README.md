@@ -42,8 +42,7 @@ npm start
 ```
 🌍 Deployment
 The app is live here:https://localhost:3000
-👉 Live Demo URL
-
+👉 Live Demo URL: https://infinite-calendar-two.vercel.app/
 
 ## 🎯 Assumptions & Design Choices
 - Month display logic: The header reflects the month occupying the largest portion in the viewport.
