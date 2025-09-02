@@ -1,46 +1,54 @@
-# Getting Started with Create React App
+# 📅 Infinite Scrollable Calendar
+This project is a React + TypeScript infinite scrollable calendar that allows users to smoothly browse past and future months. Journal entries are displayed in their respective dates, and can be viewed in a swipable card modal for easy navigation.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The app is fully mobile-optimized, designed for smooth performance, and deployed online.
 
-## Available Scripts
+# 🚀 Features
+- Infinite Vertical Scroll for past and future months.
+- Smooth, Continuous Scrolling (not month-locked).
+- Dynamic Header Month/Year — updates automatically based on visible month area.
+- Calendar Grid Layout aligned by weeks (supports leap years).
+- Journal Entry Integration:
+- Entries load from local journals.json.
+- Each entry shows image, rating, categories, description.
+- Clicking opens a swipable modal for browsing entries.
+- Responsive & Mobile-Optimized — adapts to all screen sizes.
+- Performance Optimized with lightweight rendering.
+## 🛠️ Tech Stack
+React + TypeScript
+Tailwind CSS / CSS for styling
+date-fns for date manipulations
+React Hooks for scroll tracking and state management
+## 📦 Installation & Setup
+Prerequisites
+Node.js (>=16 recommended)
+npm or yarn
+Steps
+Clone the repo:
 
-In the project directory, you can run:
+``` bash
+git clone https://github.com/siddharth-yd/infinite-calendar.git
+cd infinite-calendar
+```
+Install dependencies:
 
-### `npm start`
+``` bash
+npm install
+```
+Run in development mode:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+``` bash
+npm start
+```
+🌍 Deployment
+The app is live here:https://localhost:3000
+👉 Live Demo URL
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🎯 Assumptions & Design Choices
+- Month display logic: The header reflects the month occupying the largest portion in the viewport.
+- Infinite scrolling: Implemented to render new months dynamically without flicker.
+- Start of week: Default is Sunday (can be changed in dateUtils.ts).
+- Journal entries: Read from src/data/journals.json, mapped to dates.
+- Swipable modal: Supports left/right gestures (mobile) and click navigation (desktop).
+- Performance: Keeps DOM light by only rendering visible & nearby months.
